@@ -1,38 +1,156 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .App {
+    background-color: #e6e6e659;
   }
-  to {
-    transform: rotate(360deg);
+
+  .hero {
+    background-color: #dd8c8c;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-}
+  .hero h2 {
+    font-size: 70px;
+    font-weight: 900;
+    margin: 15px 0;
+  }
+  
+  /* Form component */
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4% 0 4%;
+    position: relative;
+  }
+  .form form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .form form button {
+    background-color: #fff;
+    padding: 9px 8px;
+    font-size: inherit;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  }
+  .form form button:hover {
+    background-color: #ffdd67;
+  }
+  .form input[type="text"] {
+    padding: 9px 10px;
+    font-size: inherit;
+    border: 3px solid #ffffff00;
+    border-radius: 8px;
+    width: 300px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    position: relative;
+  }
+  .form input {
+    background-image: url(/src/lupa.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: right;
+    display: inline-block;
+  }
+
+  .form input[type="text"]:focus {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  
+  /* Results componet */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 3%;
+  }
+  
+  /* Item component */
+  .card-emoji {
+    background-color: #b3a2a273;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+  .card-emoji:hover p.emoji-icon {
+    animation: moveemoji 1.5s infinite;
+  }
+  @keyframes moveemoji {
+    0% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+  }
+  .card-emoji p.emoji-icon {
+    font-size: 84px;
+    margin: 0;
+  }
+  .card-emoji {
+    position: relative;
+  }
+  p.copied {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    position: absolute;
+    bottom: 8px;
+    left: 10px;
+    background-color: #ffdd67;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  p.error {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0;
+    position: absolute;
+    bottom: 19px;
+    background-color: #ffdd67;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  /* Footer */
+  footer {
+    padding: 1% 0;
+    text-align: center;
+    background-color: #dd8c8c;
+  }
+  
+  /* author */
+  p.author {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    gap: 7px;
+  }
+  p.author a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+  }
